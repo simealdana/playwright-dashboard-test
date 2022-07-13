@@ -17,7 +17,13 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 5000,
   },
-
+  use: {
+    screenshot: 'only-on-failure'
+  },
+  reporter: [
+    ['line'], 
+    ['allure-playwright']
+  ],
   /* Configure projects for major browsers */
   projects: [
     {
