@@ -15,7 +15,8 @@ test.describe('New Todo', () => {
     // Create 1st todo.
     await page.locator('.new-todo').fill(TODO_ITEMS[0]);
     await page.locator('.new-todo').press('Enter');
-
+    await page.screenshot({path: 'screenshot.png', fullPage: true });
+    
     // Make sure the list only has one todo item.
     await expect(page.locator('.view label')).toHaveText([
       TODO_ITEMS[0]
