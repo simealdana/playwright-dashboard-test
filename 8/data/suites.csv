@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jul 18 18:48:10 GMT 2022","Mon Jul 18 18:48:15 GMT 2022","4949","firefox","failing-test.test.ts","GitHub - Search Result","","","should verify search result with valid repository name",""
+"failed","Mon Jul 18 18:48:15 GMT 2022","Mon Jul 18 18:48:18 GMT 2022","2729","firefox","failing-test.test.ts","GitHub - Search Result","","","should verify ""We couldn’t find any repositories"" message, after entering invalid keyword",""
+"passed","Mon Jul 18 18:48:06 GMT 2022","Mon Jul 18 18:48:09 GMT 2022","3648","chromium","github-search.test.ts","GitHub - Search Result","","","should verify search result with valid repository name",""
+"failed","Mon Jul 18 18:48:03 GMT 2022","Mon Jul 18 18:48:05 GMT 2022","2510","chromium","failing-test.test.ts","GitHub - Search Result","","","should verify ""We couldn’t find any repositories"" message, after entering invalid keyword",""
+"passed","Mon Jul 18 18:47:59 GMT 2022","Mon Jul 18 18:48:03 GMT 2022","3380","chromium","failing-test.test.ts","GitHub - Search Result","","","should verify search result with valid repository name",""
+"passed","Mon Jul 18 18:48:18 GMT 2022","Mon Jul 18 18:48:22 GMT 2022","3819","firefox","github-search.test.ts","GitHub - Search Result","","","should verify search result with valid repository name",""
