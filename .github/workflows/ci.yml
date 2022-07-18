@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+    branches: [tesult]
+  pull_request:
+    branches: [tesult]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ENV: develop
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      - run: npm ci
+      - run: npx playwright install
+      - run: npm test
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: allure-results
+          path: allure-results
+          retention-days: 20
