@@ -10,7 +10,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      customer: infinite
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js
@@ -33,8 +34,8 @@ jobs:
       if: always()
       continue-on-error: true
       with:
-        ref: gh-pages
-        path: gh-pages
+        ref: gh-pages-$customer
+        path: gh-pages-$customer
     
     - name: Test marketplace action
       uses: simple-elf/allure-report-action@master
@@ -52,5 +53,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
+        PUBLISH_BRANCH: gh-pages-$customer
         PUBLISH_DIR: allure-history
