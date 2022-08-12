@@ -34,8 +34,8 @@ jobs:
       if: always()
       continue-on-error: true
       with:
-        ref: gh-pages-${{env.CUSTOMER}}
-        path: gh-pages-${{env.CUSTOMER}}
+        ref: gh-pages
+        path: gh-pages
     
     - name: Test marketplace action
       uses: simple-elf/allure-report-action@master
@@ -53,5 +53,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages-${{env.CUSTOMER}}
+        PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
